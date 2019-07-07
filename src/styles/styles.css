@@ -1,0 +1,179 @@
+.Table-container, .Table-container-slideleft, .Table-container-slideright {
+    width: 70%;
+    margin-top: 3%
+}
+
+.Table-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Table-container-slideleft {
+    margin-left: 3%;
+    animation-duration: 0.8s;
+    animation-name: slideleft;
+}
+
+.Table-container-slideright {
+    margin-left: 15%;
+    animation-duration: 0.8s;
+    animation-name: slideright;
+}
+
+.Search {
+    font-size: 1em;
+    margin: 1%;
+}
+
+.Table {
+    margin: 1%;
+    width: 100%;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+
+@keyframes slideright {
+    from {
+        margin-left: 3%;
+    }
+    to {
+        margin-left: 15%
+    }
+}
+
+
+@keyframes slideleft {
+    from {
+        margin-left: 15%;
+    }
+    to {
+        margin-left: 3%
+    }
+}
+
+.Table-header, .Table-row {
+    width: 100%;
+    height: 20px;
+}
+
+.Table-header {
+    background-color: #d9d9d9
+}
+
+.Table-row:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.Table-cell, .Table-id-cell {
+    align-content: center;
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.Table-cell {
+    width: 30%;
+}
+
+.Table-id-cell {
+    width: 10%;
+}
+
+.CloseIcon {
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+
+    --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.5s var(--ease-out-quart);
+}
+
+.CloseIcon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transform: rotate(90deg);
+}
+
+.PersonImage {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.Sidebar, .Sidebar-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    background-color: #d9d9d9;
+    height: 100%;
+}
+
+.Sidebar {
+    animation-duration: 0.8s;
+    animation-name: slidein;
+}
+
+.Sidebar-close {
+    animation-duration: 0.5s;
+    animation-name: slideout;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 0%
+    }
+    to {
+        margin-left: 0%
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 100%;
+        width: 0%
+    }
+}
+
+.Sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-duration: 1.5s;
+    animation-name: slideinCont;
+}
+
+.Sidebar-container-name {
+    font-size: 2em;
+    text-align: center;
+}
+
+.Sidebar-container-child {
+    font-size: 1.1em;
+}
+
+.Sidebar-container-close {
+    display: none;
+}
+
+@keyframes slideinCont {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  
